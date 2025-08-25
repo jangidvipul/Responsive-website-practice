@@ -1,0 +1,168 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.nav {
+	border-bottom: 1px solid black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	padding: 0 5vw;
+}
+
+.navLeft h1 {
+	font-size: 2.8vw;
+	cursor: pointer;
+	font-weight: 800;
+}
+
+.navRight i {
+	display: none;
+}
+.navRight ul {
+	display: flex;
+	gap: 3vw;
+	list-style: none;
+}
+.navRight ul li {
+	font-size: 1.5vw;
+	font-weight: 500;
+	cursor: pointer;
+	transition: 0.3s color;
+}
+.navRight ul li:hover {
+	color: rgb(165, 244, 80);
+}
+
+@media screen and (max-width: 1024px) {
+	.navLeft h1 {
+		font-size: 3.5vw;
+	}
+
+	.navRight ul li {
+		font-size: 1.8vw;
+	}
+}
+@media screen and (max-width: 800px) {
+	.navLeft h1 {
+		font-size: 4vw;
+	}
+
+	.navRight ul li {
+		font-size: 2vw;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.navLeft h1 {
+		font-size: 5vw;
+	}
+
+	.navRight ul {
+		display: none;
+	}
+	.navRight i {
+		display: block;
+		font-size: 4vw;
+	}
+	.nav {
+		background-color: rgb(165, 244, 80);
+		height: 45px;
+	}
+}
+
+.content {
+	min-height: calc(100% - 100px);
+	display: flex;
+}
+.contentLeft {
+	width: 55%;
+	height: 100%;
+	padding: 5vw 7vw;
+}
+.contentLeft h1 {
+	font-size: 4.4vw;
+	line-height: 5vw;
+}
+.contentLeft h1 span {
+	color: rgb(165, 244, 80);
+}
+.contentLeft p {
+	font-size: 1.4vw;
+	font-weight: 600;
+	color: #666;
+	line-height: 2vw;
+	margin-top: 1.5vw;
+	margin-bottom: 2vw;
+}
+.contentLeft button {
+	background-color: rgb(165, 244, 80);
+	padding: 1.4vw 2.2vw;
+	font-size: 1.3vw;
+	font-weight: 700;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.contentLeft button:hover {
+	background-color: black;
+	color: white;
+}
+.contentRight {
+	width: 45%;
+	display: flex;
+}
+.contentRight img{
+	height: 100%;
+	width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+	.content {
+		flex-direction: column;
+		height: calc(100% - 60px);
+		align-items: center;
+	}
+	.contentLeft {
+		width: 100%;
+		height: 60%;
+	}
+	.contentRight {
+		width: 100%;
+		height: 40%;
+	}
+	.contentRight img{
+		margin-top: 3vw;
+	}
+
+	.contentLeft h1 {
+		font-size: 6.6vw;
+		line-height: 7vw;
+	}
+	.contentLeft p {
+		font-size: 2.8vw;
+		line-height: 3.3vw;
+		margin-top: 3vw;
+		margin-bottom: 3.5vw;
+	}
+	.contentLeft button {
+		padding: 1.5vw 2.2vw;
+		font-size: 1.7vw;
+	}
+}
